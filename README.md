@@ -5,7 +5,7 @@ This project aims to process serial messages sent by the MG6250 Alarm console an
 The MG6250 console serial protocol was reversed engineered to some extent. Currently, it is only possible to receive messages from the console, not writing to the serial port.
 
 <div style="text-align:center">
-  <img src="/assets/project1.jpg" alt="mg6250_ESP8266" width="40%" />
+  <img src="/assets/project1.jpeg" alt="mg6250_ESP8266" width="40%" />
 </div>
 
 ## Serial port pin layout
@@ -36,7 +36,7 @@ Most of the bytes are still unknown. However, the known bytes are enough for ide
 
 Here is the structure for each Event in the message:
 
-{% highlight cpp %}
+```cpp
 struct Event
 {
   byte seq;
@@ -62,7 +62,7 @@ struct Event
   byte typed;
   char label[17];
 };
-{% endhighlight %}
+```
 
 
 ### Event decoding
@@ -86,7 +86,7 @@ The ```paradox_serial_connect.py``` is a python program used to test the protoco
 
 The ```ParadoxMG6250.ino``` source file is a C++ sketch designed to work with an ESP8266 microcontroller.
 
-## Whats next?
+## What's next?
 
  * Communicate with the alarm console in order to Arm or Disarm the alarm remotely.
  * Improve battery performance. Right now, the sketch does not support any level of deep sleep, resulting in the worst performance as the board is always running.
