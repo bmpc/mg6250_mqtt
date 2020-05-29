@@ -4,6 +4,10 @@ This project aims to process serial messages sent by the MG6250 Alarm console an
 
 The MG6250 console serial protocol was reversed engineered to some extent. Currently, it is only possible to receive messages from the console, not writing to the serial port.
 
+<div style="text-align:center">
+  <img src="/assets/project1.jpg" alt="mg6250_ESP8266" width="40%" />
+</div>
+
 ## Serial port pin layout
 
 The pin layout for the MG6250 is not the same as older consoles such as the MG5050. The Tx and Rx pins are inverted.
@@ -75,8 +79,8 @@ After much trial and error, I also managed to figure out the CRC algorithm used 
 ## Source code
 
 This repository contains two files:
- * ```paradox_serial_connect.py```
- * ```ParadoxMG6250.ino```
+ * [paradox_serial_connect.py](/paradox_serial_connect.py)
+ * [ParadoxMG6250.ino](/ParadoxMG6250.ino)
 
 The ```paradox_serial_connect.py``` is a python program used to test the protocol. Using this script, the MG6250 can be connected to a PC direclty without a microcontroller.
 
